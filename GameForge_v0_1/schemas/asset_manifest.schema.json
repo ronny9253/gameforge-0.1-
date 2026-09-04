@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version","assets"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id","type","path","approved"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_\\-]*$"},
+          "type": {"type": "string"},
+          "category": {"type": "string"},
+          "source": {"type": "string"},
+          "path": {"type": "string", "pattern": "^Assets/.+"},
+          "approved": {"type": "boolean"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

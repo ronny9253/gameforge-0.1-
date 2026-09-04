@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version","game_id","title","version","gameforge_version","genre","orientation","target_fps","supported_platforms","core_mechanic","max_complexity","scene_entry","status"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "game_id": {"type": "string", "pattern": "^[A-Z0-9_]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "gameforge_version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "genre": {"type": "string"},
+    "orientation": {"enum": ["portrait", "landscape"]},
+    "target_fps": {"type": "integer", "enum": [30,60]},
+    "supported_platforms": {"type": "array", "minItems": 1, "items": {"enum": ["android","ios"]}},
+    "core_mechanic": {"type": "string", "minLength": 1},
+    "max_complexity": {"const": 1},
+    "scene_entry": {"type": "string", "pattern": "^Assets/.+\\.unity$"},
+    "status": {"enum": ["prototype","development","rc","release"]}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.1",
+  "game_id": "GF_VALIDATION_001",
+  "title": "GameForge Validation Game",
+  "version": "0.1.0",
+  "gameforge_version": "0.1.0",
+  "genre": "casual_puzzle",
+  "orientation": "portrait",
+  "target_fps": 60,
+  "supported_platforms": ["android", "ios"],
+  "core_mechanic": "sorting",
+  "max_complexity": 1,
+  "scene_entry": "Assets/Game/Scenes/Main.unity",
+  "status": "prototype"
+}

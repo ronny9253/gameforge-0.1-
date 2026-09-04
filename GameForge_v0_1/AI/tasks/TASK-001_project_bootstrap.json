@@ -1,0 +1,49 @@
+{
+  "task_id": "TASK-001",
+  "title": "Project Bootstrap",
+  "status": "ready",
+  "objective": "Create the minimal Unity project structure required by GameForge Core without implementing gameplay.",
+  "scope": [
+    "Unity project folders",
+    "GameForge Core placeholder assembly structure",
+    "entry scene",
+    "project documentation references"
+  ],
+  "requirements": [
+    "Use Unity 6",
+    "Preserve the GameForge folder contract",
+    "Keep game-specific code separate from Core",
+    "Do not add gameplay systems"
+  ],
+  "constraints": [
+    "Do not modify DESIGN contracts",
+    "Do not add third-party packages unless explicitly required",
+    "Do not implement monetization, analytics or backend"
+  ],
+  "dependencies": [],
+  "allowed_paths": [
+    "UnityProject/Assets/GameForge/Core/",
+    "UnityProject/Assets/Game/Scenes/"
+  ],
+  "forbidden_paths": [
+    "DESIGN/",
+    "schemas/",
+    "tools/",
+    "BUILD/"
+  ],
+  "acceptance_criteria": [
+    "Core folder exists",
+    "Game scene exists",
+    "Game-specific scripts are not placed under GameForge/Core",
+    "Project remains free of gameplay implementation"
+  ],
+  "tests": [
+    "Run ./tools/gameforge validate",
+    "Open the project in Unity and verify the scene loads"
+  ],
+  "expected_outputs": [
+    "Updated Unity project structure",
+    "Test result",
+    "Git commit hash"
+  ]
+}
